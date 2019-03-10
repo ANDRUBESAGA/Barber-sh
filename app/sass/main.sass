@@ -6,7 +6,7 @@
 
 $bg-darkgrey: #292929
 $bg-lightgrey: #f8f5f2
-$desktop: 1200px
+$desktops: 1200px
 $tablets: 768px
 $phones: 480px
 
@@ -26,6 +26,11 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
+
+	background: $bg-darkgrey url("../img/bg/back-desktop.png") center center no-repeat
+	min-height: 750px
+	background-size: cover;
+
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -53,6 +58,8 @@ body
 b, strong
 	font-weight: bold
 
+ul, li 
+	list-style: none
 
 
 @import "media" // Always at the end
