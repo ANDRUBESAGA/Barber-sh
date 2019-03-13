@@ -8,7 +8,6 @@ $bg-darkgrey: #292929
 $bg-lightgrey: #f8f5f2
 $desktops: 1200px
 $tablets: 768px
-$phones: 480px
 
 
 ::placeholder
@@ -20,16 +19,23 @@ $phones: 480px
 
 body
 	font-size: 16px
-	min-width: 320px
-	position: relative
 	line-height: 1.65
+	min-width: 320px
+	margin: 0
+	padding: 0
 	font-family: $default-font
-	overflow-x: hidden
 	color: $text
-
-	background: $bg-darkgrey url("../img/bg/back-desktop.png") center center no-repeat
+	background-color: $bg-darkgrey
+	
 	min-height: 750px
-	background-size: cover;
+
+	@include tablets 
+		background: url("../img/bg/back-tablet.png") no-repeat 50% 0
+		background-size: 720px auto
+	
+	@include desktops 
+		background: url("../img/bg/back-desktop.png") no-repeat 50% 0
+		background-size: 1178px auto
 
 	input, textarea
 		border: #666 1px solid
